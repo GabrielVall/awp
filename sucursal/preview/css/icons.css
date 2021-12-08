@@ -1,0 +1,278 @@
+.gg-bell,
+.gg-bell::before {
+ border-top-left-radius: 100px;
+ border-top-right-radius: 100px
+}
+
+.gg-bell {
+ color:white;
+ box-sizing: border-box;
+ position: relative;
+ display: block;
+ transform: scale(var(--ggs,.8));
+ border: 2px solid;
+ border-bottom: 0;
+ width: 14px;
+ height: 14px
+}
+
+.gg-bell::after,
+.gg-bell::before {
+ content: "";
+ display: block;
+ box-sizing: border-box;
+ position: absolute
+}
+
+.gg-bell::before {
+ background: currentColor;
+ width: 4px;
+ height: 4px;
+ top: -4px;
+ left: 3px
+}
+
+.gg-bell::after {
+ border-radius: 3px;
+ width: 16px;
+ height: 10px;
+ border: 6px solid transparent;
+ border-top: 1px solid transparent;
+ box-shadow:
+ inset 0 0 0 4px,
+ 0 -2px 0 0;
+ top: 14px;
+ left: -3px;
+ border-bottom-left-radius: 100px;
+ border-bottom-right-radius: 100px
+}
+.gg-heart,
+.gg-heart::after {
+ border: 2px solid;
+ border-top-left-radius: 100px;
+ border-top-right-radius: 100px;
+ width: 10px;
+ height: 8px;
+ border-bottom: 0
+}
+
+.gg-heart {
+ box-sizing: border-box;
+ position: relative;
+ transform:
+ translate(
+ calc(-10px / 2 * var(--ggs,1)),
+ calc(-6px / 2 * var(--ggs,1))
+ )
+ rotate(-45deg)
+ scale(var(--ggs,1));
+ display: block
+}
+
+.gg-heart::after,
+.gg-heart::before {
+ content: "";
+ display: block;
+ box-sizing: border-box;
+ position: absolute
+}
+
+.gg-heart::after {
+ right: -9px;
+ transform: rotate(90deg);
+ top: 5px
+}
+
+.gg-heart::before {
+ width: 11px;
+ height: 11px;
+ border-left: 2px solid;
+ border-bottom: 2px solid;
+ left: -2px;
+ top: 3px
+}
+.gg-pin {
+    color: var(--main-color);
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: rotate(45deg) scale(var(--ggs,1));
+    width: 18px;
+    height: 18px;
+    border-radius: 100% 100% 0 100%;
+    border: 2px solid;
+    margin-top: -4px
+   }
+   
+   .gg-pin::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 2px solid;
+    top: 3px;
+    left: 3px;
+    border-radius: 40px
+   }
+   .gg-home {
+    background:
+    linear-gradient(to left,
+    currentColor 5px,transparent 0)
+    no-repeat 0 bottom/4px 2px,
+    linear-gradient(to left,
+    currentColor 5px,transparent 0)
+    no-repeat right bottom/4px 2px;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 18px;
+    height: 14px;
+    border: 2px solid;
+    border-top: 0;
+    border-bottom: 0;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-bottom: -2px
+    }
+   
+    .gg-home::after,
+    .gg-home::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute
+    }
+   
+    .gg-home::before {
+    border-top: 2px solid;
+    border-left: 2px solid;
+    border-top-left-radius: 4px;
+    transform: rotate(45deg);
+    top: -5px;
+    border-radius: 3px;
+    width: 14px;
+    height: 14px;
+    left: 0
+    }
+   
+    .gg-home::after {
+    width: 8px;
+    height: 10px;
+    border: 2px solid;
+    border-radius: 100px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0;
+    left: 3px;
+    bottom: 0
+    }
+    .gg-shopping-bag {
+        transform: scale(var(--ggs,1))
+       }
+       
+       .gg-shopping-bag,
+       .gg-shopping-bag::after {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid;
+        border-radius: 3px
+       }
+       
+       .gg-shopping-bag::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 6px;
+        border-bottom-left-radius: 120px;
+        border-bottom-right-radius: 120px;
+        border-top: 0;
+        top: 2px;
+        left: 3px
+       }
+       .loader,
+       .loader:after {
+         border-radius: 50%;
+         width: 10em;
+         height: 10em;
+       }
+       .loader {
+        position: absolute;
+        left:0;
+        right:0;
+        margin: auto;
+         font-size: 10px;
+         position: relative;
+         border-top: 1.1em solid var(--background-loader);
+         border-right: 1.1em solid var(--background-loader);
+         border-bottom: 1.1em solid var(--background-loader);
+         border-left: 1.1em solid var(--color-loader);
+         -webkit-transform: translateZ(0);
+         -ms-transform: translateZ(0);
+         transform: translateZ(0);
+         -webkit-animation: load8 1.1s infinite linear;
+         animation: load8 1.1s infinite linear;
+       }
+       @-webkit-keyframes load8 {
+         0% {
+           -webkit-transform: rotate(0deg);
+           transform: rotate(0deg);
+         }
+         100% {
+           -webkit-transform: rotate(360deg);
+           transform: rotate(360deg);
+         }
+       }
+       @keyframes load8 {
+         0% {
+           -webkit-transform: rotate(0deg);
+           transform: rotate(0deg);
+         }
+         100% {
+           -webkit-transform: rotate(360deg);
+           transform: rotate(360deg);
+         }
+       }
+       .lds-ring {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+      }
+      .lds-ring div {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border: 5px solid #fff;
+        border-radius: 50%;
+        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: var(--main-color) transparent transparent transparent;
+      }
+      .lds-ring div:nth-child(1) {
+        animation-delay: -0.45s;
+      }
+      .lds-ring div:nth-child(2) {
+        animation-delay: -0.3s;
+      }
+      .lds-ring div:nth-child(3) {
+        animation-delay: -0.15s;
+      }
+      @keyframes lds-ring {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      
